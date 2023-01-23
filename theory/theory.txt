@@ -16,4 +16,4 @@ In React.js,a component is a piece of code thar represents a part of a user inte
 
  Props(properties) is a way for manipulating data and states.
  We can send data trough props and we can send data to parent
- trough props.
+ trough props...
