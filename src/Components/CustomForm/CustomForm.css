@@ -1,0 +1,21 @@
+.label {
+    font-size: 20px;
+    color: wheat;
+  }
+  
+  input {
+    padding: 10px;
+    outline: none;
+    border: none;
+    color: black;
+  }
+  
+  button {
+    padding: 10px 35px;
+    color: white;
+    background-color: black;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-radius: 15px;
+  }

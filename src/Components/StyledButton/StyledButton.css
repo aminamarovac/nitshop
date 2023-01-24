@@ -1,14 +1,15 @@
-.StyledButton{
+.styledButton {
     width: 200px;
     height: 50px;
-    color: white;
-    background-color: rgb(37, 61, 218);
+    color: rgb(23, 10, 10);
+    background-color: rgb(209, 206, 248);
     border-radius: 15px;
-}
-.styledButton{
-    width: 200px;
-    height: 50px;
-    color: white;
-    background-color: black;
-    border-radius: 10px;
-}
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease all;
+  }
+  
+  .styledButton:hover {
+    background-color: rgb(87, 145, 246);
+    color: rgb(226, 226, 226);
+  }

@@ -17,3 +17,9 @@ In React.js,a component is a piece of code thar represents a part of a user inte
  Props(properties) is a way for manipulating data and states.
  We can send data trough props and we can send data to parent
  trough props...
+
+ Parent component is component wich is created.
+ Child component is component wich is included in Parent component.
+ Parent component can have more than one Child components.
+ Child components can be also found in other components as children(prop).
+ Children as a prop is a reserved name.

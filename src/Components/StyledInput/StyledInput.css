@@ -1,0 +1,8 @@
+.StyledInput {
+	margin-top: 10px;
+	background-color: rgb(42, 108, 165);
+	color: white;
+	width: 40%;
+	height: 30px;
+	max-width: auto;
+}

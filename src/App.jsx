@@ -1,25 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
-import CustomForm from "./Components/CustomForm/CustomForm";
+import CustomForm from "./Components/CustomForm/CustomForm"
+import StyledButton from "./Components/StyledButton/StyledButton";
+import CustomDiv from "./Components/CustomDiv/CustomDiv";
+function App() {
+  const [fullName, setFullName] = useState("");
 
-const App = () => {
-  const [innerText, setInnerText] = useState("");
-  const [clicked, setClicked] = useState(false);
-
-  useEffect(() => {
-    clicked ? setInnerText("Clicked") : setInnerText("Click me");
-  }, [clicked]);
-
-  function buttonClick() {
-    setClicked(!clicked);
+  function dataGrabber(name, lastName) {
+    let fullName = name + " " + lastName;
+    console.log(fullName);
+    setFullName(fullName);
   }
 
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <CustomForm />
+    <div className="App">
+      <header className="App-header">
+        <CustomDiv>
+          <h4>{fullName}</h4>
+        </CustomDiv>
+        <CustomForm sendData={(name, lName) => dataGrabber(name, lName)} />
       </header>
     </div>
-  )
-};
-  export default App;
+  );
+}
+
+export default App;
