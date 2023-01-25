@@ -16,7 +16,6 @@ const CustomForm = (props) => {
     <div>
       <StyledInput onChangeHandler={nameHandler} value={name} />
       <StyledInput onChangeHandler={lastNameHandler} value={lastName} />
-      <StyledButton innerText='Send' />
       <StyledButton
         onClickHandler={() => props.sendData(name, lastName)}
         innerText='Send'

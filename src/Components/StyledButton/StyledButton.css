@@ -1,15 +1,14 @@
-.styledButton {
+.StyledButton {
     width: 200px;
     height: 50px;
     color: rgb(23, 10, 10);
     background-color: rgb(209, 206, 248);
     border-radius: 15px;
     border: none;
-    cursor: pointer;
     transition: 0.3s ease all;
   }
   
-  .styledButton:hover {
+  .StyledButton:hover {
     background-color: rgb(87, 145, 246);
     color: rgb(226, 226, 226);
   }

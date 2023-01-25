@@ -3,7 +3,7 @@ import "./StyledButton.css";
 
 const StyledButton = (props) => {
   return (
-    <button className="styledButton" onClick={props.onClickHandler}>
+    <button className="StyledButton" onClick={props.onClickHandler}>
       Send
     </button>
   );

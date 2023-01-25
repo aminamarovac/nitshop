@@ -1,0 +1,25 @@
+U React.js, komponenta je dio koda koji predstavlja dio korisničkog interfejsa.
+ To može biti komponenta klase ili funkcionalna komponenta.
+ Komponenta klase je js klasa koja proširuje klasu React.Component, dok je funkcionalna komponenta a
+ js funkcija koja vraća samo React element.
+
+ Purecomeponent je posebna vrsta komponente koja je slična komponenti,
+ ali sa dodatnim funkcijama ili optimizacijama.
+ Kada je komponenta PureComeponent, React će izvršiti plitku komparaciju rekvizita
+ i stanje prije ponovnog prikazivanja komponente. To znači da ako se props i stanje nisu promijenili,
+ komponenta se neće ponovo renderirati. Ovo može dovesti do poboljšanja performansi u nekim slučajevima,
+ ali ako se ne koristi pravilno, može dovesti do neočekivanog ponašanja.
+
+ Donja linija, komponenta je najosnovnija i najčešće korištena za izgradnju
+ blok u Reactu i PureComeponentu
+ koristi se kada su potrebne posebne optimizacije.
+
+ Props(properties) je način za manipulaciju podacima i stanjima.
+ Možemo slati podatke kroz rekvizite i možemo slati podatke roditelju
+ kroz rekvizite...
+
+ Roditeljska komponenta je komponenta koja se kreira.
+ Podređena komponenta je komponenta koja je uključena u Roditeljsku komponentu.
+ Roditeljska komponenta može imati više od jedne podređene komponente.
+ Podređene komponente se takođe mogu naći u drugim komponentama kao deca (vrednost).
+ Djeca kao vrednost je rezervisano ime.
