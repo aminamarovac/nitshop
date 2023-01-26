@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
-import CustomForm from "./Components/CustomForm/CustomForm"
-import StyledButton from "./Components/StyledButton/StyledButton";
+import CustomForm from "./Components/CustomForm/CustomForm";
 import CustomDiv from "./Components/CustomDiv/CustomDiv";
+import ToDo from "./Components/ToDo/ToDo";
 
-function App() {
+const App = () => {
   const [fullName, setFullName] = useState("");
 
   function dataGrabber(name, lastName) {
@@ -14,15 +14,18 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
+      <>
+    <div className='App'>
+      <header className='App-header'>
         <CustomDiv>
           <h4>{fullName}</h4>
         </CustomDiv>
         <CustomForm sendData={(name, lName) => dataGrabber(name, lName)} />
       </header>
     </div>
+      <ToDo />
+    </>
   );
-}
+};
 
 export default App;
