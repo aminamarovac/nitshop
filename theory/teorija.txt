@@ -15,8 +15,8 @@ U React.js, komponenta je dio koda koji predstavlja dio korisničkog interfejsa.
  koristi se kada su potrebne posebne optimizacije.
 
  Props(properties) je način za manipulaciju podacima i stanjima.
- Možemo slati podatke kroz rekvizite i možemo slati podatke roditelju
- kroz rekvizite...
+ Možemo slati podatke kroz vrednosti i možemo slati podatke roditelju
+ kroz vrednosti...
 
  Roditeljska komponenta je komponenta koja se kreira.
  Podređena komponenta je komponenta koja je uključena u Roditeljsku komponentu.
