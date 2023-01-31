@@ -19,6 +19,7 @@ const App = () => {
       <header className='App-header'>
         <CustomDiv>
           <h4>{fullName}</h4>
+          <p></p>
         </CustomDiv>
         <CustomForm sendData={(name, lName) => dataGrabber(name, lName)} />
       </header>
@@ -29,3 +30,4 @@ const App = () => {
 };
 
 export default App; 
+
