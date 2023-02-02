@@ -1,5 +1,5 @@
 import React from "react";
-const CustomDiv = ({ 
+const CustomDiv = ({
   children,
   width,
   height,
@@ -8,22 +8,26 @@ const CustomDiv = ({
   padding,
   margin,
 }) => {
-const divWidth=width ? width:100;
-const divHeight=height ? height:100;
-const divBr=borderRadius? borderRadius:0;
-const divBorder=border ? border:"1px solid black";
-const divMargin=margin?margin:0;
-const divPadding=padding?padding:0;
-  return <div style={
-    {
-      width:divWidth,
-      height:divHeight,
-      borderRadius:divBr,
-      border:divBorder,
-      margin:divMargin,
-      padding:divPadding,
-    }
-  }>{children}</div>;
+  const divWidth = width ? width : 100;
+  const divHeight = height ? height : 100;
+  const divBr = borderRadius ? borderRadius : 0;
+  const divBorder = border ? border : "1px solid black";
+  const divMargin = margin ? margin : 0;
+  const divPadding = padding ? padding : 0;
+  return (
+    <div
+      style={{
+        width: divWidth,
+        height: divHeight,
+        borderRadius: divBr,
+        border: divBorder,
+        margin: divMargin,
+        padding: divPadding,
+      }}
+    >
+      {children}
+    </div>
+  );
 };
 
 export default CustomDiv;
