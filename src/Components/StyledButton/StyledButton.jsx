@@ -1,11 +1,9 @@
 import React from "react";
 import "./StyledButton.css";
-
-const StyledButton = (props) => {
+import PrimaryButon from "../PrimaryButton/PrimaryButton";
+const StyledButton = ({onClickHandler,innerText}) => {
   return (
-    <button className="StyledButton" onClick={props.onClickHandler}>
-      Send
-    </button>
+    <PrimaryButon onclick={onClickHandler} >{innerText}</PrimaryButon>
   );
 };
 
