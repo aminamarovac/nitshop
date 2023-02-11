@@ -1,13 +1,14 @@
 import React from "react";
-import {Grid}  from "@mui/material";
+import Grid from "@mui/material/Grid";
 import TopRow from "./TopRow";
-
-const Navigation=()=>{
-    return(
-        <Grid container direction="row">
-            <TopRow/>
-        </Grid>
-    )
+import CustomDiv from "../../Components/CustomDiv/CustomDiv";
+const Navigation = () => {
+  return (
+    <Grid container direction='row'>
+      <CustomDiv padding='0px 5%' border='0px' width='100%'>
+        <TopRow/>
+      </CustomDiv>
+    </Grid>
+  );
 };
-
 export default Navigation;
