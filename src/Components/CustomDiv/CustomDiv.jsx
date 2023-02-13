@@ -14,8 +14,9 @@ const CustomDiv = ({
   justifyItems,
   alignItems,
   alignContent,
+  verticalAlign
 }) => {
-  const divWidth = width ? width : "auto";
+  const divWidth = width ? width : "100%";
   const divHeight = height ? height : "auto";
   const divBR = borderRadius ? borderRadius : 0;
   const divBorder = border ? border : "0px";
@@ -27,6 +28,8 @@ const CustomDiv = ({
   const ji = justifyItems ? justifyItems : "center";
   const ai = alignItems ? alignItems : "center";
   const ac = alignContent ? alignContent : "center";
+  const va = verticalAlign ? verticalAlign : "center";
+
 
   return (
     <div
@@ -43,6 +46,7 @@ const CustomDiv = ({
         justifyItems: ji,
         alignContent: ac,
         alignItems: ai,
+        verticalAlign:va
       }}
     >
       {children}
