@@ -14,9 +14,11 @@ const CustomDiv = ({
   justifyItems,
   alignItems,
   alignContent,
-  verticalAlign
+  verticalAlign,
+  textAlign,
+  letterSpacing,
 }) => {
-  const divWidth = width ? width : "100%";
+  const divWidth = width ? width : "auto";
   const divHeight = height ? height : "auto";
   const divBR = borderRadius ? borderRadius : 0;
   const divBorder = border ? border : "0px";
@@ -28,8 +30,9 @@ const CustomDiv = ({
   const ji = justifyItems ? justifyItems : "center";
   const ai = alignItems ? alignItems : "center";
   const ac = alignContent ? alignContent : "center";
-  const va = verticalAlign ? verticalAlign : "center";
-
+  const va = verticalAlign ? verticalAlign : "middle";
+  const ta = textAlign ? textAlign : "left";
+  const ls=letterSpacing?letterSpacing:"0px";
 
   return (
     <div
@@ -46,7 +49,9 @@ const CustomDiv = ({
         justifyItems: ji,
         alignContent: ac,
         alignItems: ai,
-        verticalAlign:va
+        verticalAlign: va,
+        textAlign: ta,
+        letterSpacing:ls,
       }}
     >
       {children}
