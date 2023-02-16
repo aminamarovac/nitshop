@@ -7,6 +7,7 @@ const Navigation = () => {
     <Grid container direction='row'>
       <CustomDiv padding='0px 5%' border='0px' width='100%'>
         <TopRow/>
+        <MainBar/>
       </CustomDiv>
     </Grid>
   );
