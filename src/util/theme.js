@@ -18,4 +18,4 @@ export const fontSize = {
   medium: "18px",
   large: "24px",
   xLarge: "36px",
-};
+}
