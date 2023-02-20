@@ -40,29 +40,28 @@ const TopRow = () => {
   const screenWidth = getScreenWidth();
 
   console.log(screenWidth);
-
   return (
     <CustomDiv
       bgColor={colors.secondColor}
-      display="flex"
-      width="100%"
-      height="30px"
-      padding="0px 5%"
-      border="0px"
+      display='flex'
+      width='100%'
+      height='30px'
+      padding='0px 10%'
+      border='0px'
     >
-      <Grid container direction="row">
+      <Grid container direction='row'>
         <Grid item md={6} lg={6}>
-          <CustomDiv display="flex" alignItems="center">
+          <CustomDiv display='flex' alignItems='center'>
             <PhoneIcon
               style={{
                 fontSize: fontSize.normal,
               }}
             />
-            <Text fontSize={fontSize.small}>+381669597807</Text>
+            <Text fontSize={fontSize.small}>+38163333333</Text>
             <CustomDiv
-              display="flex"
-              alignItems="center"
-              margin="0px 0px 0px 5px"
+              display='flex'
+              alignItems='center'
+              margin='0px 0px 0px 5px'
             >
               <EmailIcon
                 style={{
@@ -75,10 +74,29 @@ const TopRow = () => {
         </Grid>
         <Grid item md={6} lg={6}>
           <CustomDiv
-            display="flex"
-            alignItems="center"
-            justifyContent="flex-end"
+            display='flex'
+            alignItems='center'
+            justifyContent='flex-end'
+            textAlign='right'
           >
+            <TwitterIcon
+              style={{
+                fontSize: fontSize.normal,
+                color: colors.gray,
+              }}
+            />
+            <InstagramIcon
+              style={{
+                fontSize: fontSize.normal,
+                color: colors.gray,
+              }}
+            />
+            <FacebookIcon
+              style={{
+                fontSize: fontSize.normal,
+                color: colors.gray,
+              }}
+            />
             <SocialIcons />
           </CustomDiv>
         </Grid>
@@ -86,5 +104,4 @@ const TopRow = () => {
     </CustomDiv>
   );
 };
-
 export default TopRow;

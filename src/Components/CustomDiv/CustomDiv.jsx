@@ -32,7 +32,7 @@ const CustomDiv = ({
   const ac = alignContent ? alignContent : "center";
   const va = verticalAlign ? verticalAlign : "middle";
   const ta = textAlign ? textAlign : "left";
-  const ls=letterSpacing?letterSpacing:"0px";
+  const ls = letterSpacing ? letterSpacing : "0px";
 
   return (
     <div
@@ -51,7 +51,7 @@ const CustomDiv = ({
         alignItems: ai,
         verticalAlign: va,
         textAlign: ta,
-        letterSpacing:ls,
+        letterSpacing: ls,
       }}
     >
       {children}
