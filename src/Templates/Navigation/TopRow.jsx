@@ -40,6 +40,7 @@ const TopRow = () => {
   const screenWidth = getScreenWidth();
 
   console.log(screenWidth);
+
   return (
     <CustomDiv
       bgColor={colors.secondColor}
@@ -61,7 +62,7 @@ const TopRow = () => {
             <CustomDiv
               display='flex'
               alignItems='center'
-              margin='0px 0px 0px 5px'
+              margin='0px 0px 0px 15px'
             >
               <EmailIcon
                 style={{
@@ -77,26 +78,7 @@ const TopRow = () => {
             display='flex'
             alignItems='center'
             justifyContent='flex-end'
-            textAlign='right'
           >
-            <TwitterIcon
-              style={{
-                fontSize: fontSize.normal,
-                color: colors.gray,
-              }}
-            />
-            <InstagramIcon
-              style={{
-                fontSize: fontSize.normal,
-                color: colors.gray,
-              }}
-            />
-            <FacebookIcon
-              style={{
-                fontSize: fontSize.normal,
-                color: colors.gray,
-              }}
-            />
             <SocialIcons />
           </CustomDiv>
         </Grid>
@@ -104,4 +86,5 @@ const TopRow = () => {
     </CustomDiv>
   );
 };
+
 export default TopRow;
