@@ -6,6 +6,7 @@ const App = () => {
   return (
     <>
       <Navigation>aaaaa</Navigation>
+      <Slider></Slider>
     </>
   );
 };
