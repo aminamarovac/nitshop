@@ -28,7 +28,7 @@ const LinkBar = () => {
               Kontakt
             </Text>
           </CustomDiv>
-        </Grid>
+        </Grid>9828
         <Grid item sm={6} md={6} lg={6}>
           <CustomDiv
             display='flex'
