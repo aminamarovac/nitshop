@@ -53,4 +53,4 @@ const LinkBar = () => {
   );
 };
 
-export default LinkBar;
+export default LinkBar
