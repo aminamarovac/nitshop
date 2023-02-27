@@ -1,5 +1,5 @@
-
-
-const SimplifiedDiv=({style,children})=>(<div style={style}>{children}</div>);
-
-export default SimplifiedDiv;
+const SimplifiedDiv = ({ style, children }) => (
+    <div style={style}>{children}</div>
+  );
+  
+  export default SimplifiedDiv;

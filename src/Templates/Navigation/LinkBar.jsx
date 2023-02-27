@@ -1,17 +1,27 @@
 import { Grid } from "@mui/material";
 import CustomDiv from "../../Components/CustomDiv/CustomDiv";
+import SimplifiedDiv from "../../Components/SimplifiedDiv/SimplifiedDiv";
 import Text from "../../Components/Text/Text";
 import { colors, fontSize } from "../../util/theme";
-import TextField from '@mui/material/TextField';
-import SearchIcon from '@mui/icons-material/Search';
-import InputAdornment from '@mui/material/InputAdornment';
+import TextField from "@mui/material/TextField";
+import SearchIcon from "@mui/icons-material/Search";
+import InputAdornment from "@mui/material/InputAdornment";
+
+const styles = {
+  navBar: {
+    display: "flex",
+    gap: "30px",
+    height: "40px",
+    alignItems: "center",
+  },
+};
 
 const LinkBar = () => {
   return (
     <CustomDiv display='flex' padding='0px 10%' width='100%'>
       <Grid container direction='row'>
         <Grid item sm={6} md={6} lg={6}>
-          <CustomDiv display='flex' alignItems='center' gap='30px'>
+          <SimplifiedDiv style={styles.navBar}>
             <Text fontSize={fontSize.normal} color={colors.gray}>
               Home
             </Text>
@@ -27,8 +37,8 @@ const LinkBar = () => {
             <Text fontSize={fontSize.normal} color={colors.gray}>
               Kontakt
             </Text>
-          </CustomDiv>
-        </Grid>9828
+          </SimplifiedDiv>
+        </Grid>
         <Grid item sm={6} md={6} lg={6}>
           <CustomDiv
             display='flex'
@@ -53,4 +63,4 @@ const LinkBar = () => {
   );
 };
 
-export default LinkBar
+export default LinkBar;
