@@ -38,7 +38,6 @@ const CustomDiv = ({
   const bb = borderBottom ? borderBottom : "0px";
   const gapp = gap ? gap : "0px";
 
-
   return (
     <div
       style={{

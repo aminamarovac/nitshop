@@ -1,6 +1,5 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import CustomDiv from "../../Components/CustomDiv/CustomDiv";
 import TopRow from "./TopRow";
 import MainBar from "./MainBar";
 import LinkBar from "./LinkBar";
