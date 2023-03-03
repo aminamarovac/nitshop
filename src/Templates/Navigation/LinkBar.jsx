@@ -93,7 +93,6 @@ const LinkBarSM = () => (
           
 
       </SimplifiedDiv>
-      <MenuIcon/>        
       </Grid>
     </SimplifiedDiv>
   </SimplifiedDiv>
