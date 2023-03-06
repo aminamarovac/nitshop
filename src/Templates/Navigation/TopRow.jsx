@@ -9,8 +9,6 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import Text from "../../Components/Text/Text";
 import { getScreenWidth } from "../../util/helpers";
-import SimplifiedDiv from "../../Components/SimplifiedDiv/SimplifiedDiv";
-
 const SocialIcons = () => (
   <>
     <TwitterIcon
@@ -36,15 +34,18 @@ const SocialIcons = () => (
     />
   </>
 );
-
 const TopRow = () => {
   const screenWidth = getScreenWidth();
-  const alignItemsInSecondDiv = screenWidth == "SM" ? "center" : "flex-end";
-  const alignItemsInFirstDiv = screenWidth == "SM" ? "center" : "flex-start";
-  const paddingInDiv = screenWidth == "SM" ? "10px 0px" : "0px";
-  const topDivHeight = screenWidth == "SM" ? "auto" : "30px";
+
+  console.log(screenWidth);
+
+  const alignItemsInFirstDiv = screenWidth === "SM" ? "center" : "flex-start";
+  const alignItemsInSecondDiv = screenWidth === "SM" ? "center" : "flex-end";
+  const paddingInDiv = screenWidth === "SM" ? "10px 0px" : "0px";
+  const topDivHeight = screenWidth === "SM" ? "auto" : "30px";
   const responsivePadding =
     screenWidth === "SM" ? "0px" : screenWidth === "MD" ? "0px" : "0px 10%";
+
   return (
     <CustomDiv
       bgColor={colors.secondColor}
@@ -53,15 +54,15 @@ const TopRow = () => {
       height={topDivHeight}
       padding={responsivePadding}
       border="0px"
+      alignItems="center"
     >
       <Grid container direction="row">
-        <Grid item xs={12} sm={12} md={6} lg={6}>
+        <Grid item xs={12} sm={6} md={6} lg={6}>
           <CustomDiv
             display="flex"
             alignItems="center"
             justifyContent={alignItemsInFirstDiv}
             padding={paddingInDiv}
-            border="0px"
           >
             <PhoneIcon
               style={{
@@ -88,6 +89,7 @@ const TopRow = () => {
             display="flex"
             alignItems="center"
             justifyContent={alignItemsInSecondDiv}
+            padding={paddingInDiv}
           >
             <SocialIcons />
           </CustomDiv>
@@ -96,5 +98,4 @@ const TopRow = () => {
     </CustomDiv>
   );
 };
-
 export default TopRow;
