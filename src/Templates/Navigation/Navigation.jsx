@@ -6,7 +6,7 @@ import LinkBar from "./LinkBar";
 
 const Navigation = () => {
   return (
-    <Grid container direction='row'>
+    <Grid container direction="row">
       <TopRow />
       <MainBar />
       <LinkBar />

@@ -5,7 +5,6 @@ import girl3 from "../../assets/images/home/girl3.jpg";
 import SimplifiedDiv from "../../Components/SimplifiedDiv/SimplifiedDiv";
 import { Grid } from "@mui/material";
 import { getScreenWidth } from "../../util/helpers";
-
 const sliders = [
   {
     imgSrc: girl1,
@@ -20,29 +19,25 @@ const sliders = [
     imgText: "Snaha 3",
   },
 ];
-
 const Slider = () => {
   const deviceWidth = getScreenWidth();
-
   const setSliderMargin =
     deviceWidth === "SM"
       ? "0px"
       : deviceWidth === "MD"
       ? "0px 10px"
       : "0px 10%";
-
   const setPaddingTop =
     deviceWidth === "SM" ? "10px" : deviceWidth === "MD" ? "20px" : "30px";
 
   const styles = {
     sliderContainer: {
-      width: "100%",
-      height: "200px",
+      width: "80%",
+      height: "auto",
       paddingTop: setPaddingTop,
       margin: setSliderMargin,
     },
   };
-
   return (
     <Grid container direction="row">
       <Grid item xs={12} sm={12} md={12} lg={12}>
@@ -53,5 +48,4 @@ const Slider = () => {
     </Grid>
   );
 };
-
 export default Slider;
