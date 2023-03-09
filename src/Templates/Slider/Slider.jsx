@@ -5,6 +5,7 @@ import girl3 from "../../assets/images/home/girl3.jpg";
 import SimplifiedDiv from "../../Components/SimplifiedDiv/SimplifiedDiv";
 import { Grid } from "@mui/material";
 import { getScreenWidth } from "../../util/helpers";
+
 const sliders = [
   {
     imgSrc: girl1,
@@ -30,7 +31,6 @@ const Slider = () => {
   const setPaddingTop =
     deviceWidth === "SM" ? "10px" : deviceWidth === "MD" ? "20px" : "30px";
   const sliderWidthSM = deviceWidth !== "LG" ? "100%" : "80%";
-
   const styles = {
     sliderContainer: {
       width: sliderWidthSM,
