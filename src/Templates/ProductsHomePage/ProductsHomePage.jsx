@@ -3,30 +3,39 @@ import { Grid } from "@mui/material";
 import SimplifiedDiv from "../../Components/SimplifiedDiv/SimplifiedDiv";
 import Text from "../../Components/Text/Text";
 import CategoryTab from "../CategoryTab/CategoryTab";
+import { fontSize, fontWeight, colors } from "../../util/theme";
 
 const styles = {
   container: {
+    display: "flex",
     padding: "0px 10%",
   },
   headingContainer: {
+    display: "flex",
     width: "100%",
-    textAlign: "center",
+    justifyContent: "center",
+    padding: "10px 0px",
+  },
+  headingText: {
+    fontSize: fontSize.medium,
+    fontWeight: fontWeight.mediumBold,
+    color: colors.accentColor,
   },
 };
 
 const ProductsHomePage = () => {
   return (
-    <SimplifiedDiv style={styles.headingContainer}>
+    <SimplifiedDiv style={styles.container}>
       <Grid container direction="row">
         <Grid item md={3} lg={3}>
-          <SimplifiedDiv>
-            <Text>Category</Text>
+          <SimplifiedDiv style={styles.headingContainer}>
+            <Text style={styles.headingText}>Category</Text>
           </SimplifiedDiv>
           <CategoryTab />
         </Grid>
         <Grid item md={9} lg={9}>
           <SimplifiedDiv style={styles.headingContainer}>
-            <Text>Articles</Text>
+            <Text style={styles.headingText}>Articles</Text>
           </SimplifiedDiv>
         </Grid>
       </Grid>
