@@ -82,7 +82,6 @@ const subCategory = [
 
 const CategoryTab = () => {
 
-  const [isOpenCategory,setIsOpenCategory]=useState()
   const styles = {
     container: {
       width: "100%",
@@ -124,11 +123,10 @@ const CategoryTab = () => {
             <SimplifiedDiv style={styles.categoryContainer}>
               <Text style={styles.category}>{cat.name}</Text>
               {filteredSubcategories.length > 0 && (
-              <AddIcon style={styles.addIconStyle}
- />
+              <AddIcon style={styles.addIconStyle}/>
               )}
             </SimplifiedDiv>
-            {filteredSubcategories.length > 0 && isOpenCategory==cat.name &&(
+            {filteredSubcategories.length > 0 &&(
               <SimplifiedDiv style={styles.subCategoryContainer}>
                 {filteredSubcategories.map((sub) => (
                   <Text style={styles.subCategoryText}>{sub.name}</Text>
