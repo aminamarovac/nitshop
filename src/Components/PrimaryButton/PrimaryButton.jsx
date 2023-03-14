@@ -1,15 +1,21 @@
 import React from "react";
 import styled from "styled-components";
+import { colors } from "../../util/theme";
 
-const PrimaryButon = styled.button`
-  border: 2px solid pink;
-  color: ${(props)=>(props.primary?"pink" : "white")};
-  background-color: ${(props)=>(props.primary?"white" : "pink")};
-  padding: 20px;
-  margin:50px auto;
-  border-radius:20px;
-  margin-left:250px;
-  opacity:${(props)=>(props.opacity ? props.opacity:1)};
+const PrimaryButton = styled.button`
+  border: 2px solid
+  color: ${(props) =>
+    props.primary ? colors.white : props.color ? props.color : colors.black};
+  background-color: ${(props) =>
+    props.primary
+      ? colors.accentColor
+      : props.bgColor
+      ? props.bgColor
+      : colors.white};
+  padding: ${(props) => (props.padding ? props.padding : 20)}px;
+  opacity: ${(props) => (props.opacity ? props.opacity : 1)};
+  width: ${(props) => (props.width ? props.width : "auto")};
+  height: ${(props) => (props.height ? props.height : "auto")};
 `;
 
-export default PrimaryButon;
+export default PrimaryButton;

@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import SimplifiedDiv from "../../Components/SimplifiedDiv/SimplifiedDiv";
 import Text from "../../Components/Text/Text";
 import { colors, fontSize } from "../../util/theme";
 import AddIcon from "@mui/icons-material/Add";
-
 const categories = [
   {
     name: "Sportswear",
@@ -46,7 +45,6 @@ const categories = [
     active: false,
   },
 ];
-
 const subCategory = [
   {
     categoryName: "Sportswear",
@@ -69,23 +67,21 @@ const subCategory = [
     active: false,
   },
   {
-    categoryName: "Sportswear",
+    categoryName: "Mens",
     name: "Nike",
     active: false,
   },
   {
-    categoryName: "Sportswear",
+    categoryName: "Mens",
     name: "Puma",
     active: false,
   },
 ];
-
 const CategoryTab = () => {
-
+  const [isOpenCategory, setIsOpenCategory] = useState(categories);
   const styles = {
     container: {
-      width: "100%",
-      border: `0.5px solid ${colors.lightGray} `,
+      border: `0.5px solid ${colors.lightGray}`,
       borderRadius: "2px",
       textAlign: "left",
       padding: "15px 20px",
@@ -96,25 +92,25 @@ const CategoryTab = () => {
     categoryContainer: {
       display: "flex",
       justifyContent: "space-between",
-      alignItems:"center",
+      alignItems: "center",
     },
     addIconStyle: {
       fontSize: fontSize.medium,
       color: colors.accentColor,
     },
-    subCategoryContainer:{
-      padding:"0px 10px"
+    subCategoryContainer: {
+      padding: "0px 10px",
     },
-    subCategoryText:{
-      fontSize:fontSize.smallPlus,
-      color:colors.gray,
-      padding:"2px 0px"
+    subCategoryText: {
+      fontSize: fontSize.smallPlus,
+      color: colors.gray,
+      padding: "2px 0px",
     },
   };
-
+  console.log(isOpenCategory);
   return (
     <SimplifiedDiv style={styles.container}>
-      {categories.map((cat) => {
+      {categories.map((cat, index) => {
         const filteredSubcategories = subCategory.filter(
           (sub) => sub.categoryName === cat.name
         );
@@ -123,21 +119,47 @@ const CategoryTab = () => {
             <SimplifiedDiv style={styles.categoryContainer}>
               <Text style={styles.category}>{cat.name}</Text>
               {filteredSubcategories.length > 0 && (
-              <AddIcon style={styles.addIconStyle}/>
+                <AddIcon
+                  style={styles.addIconStyle}
+                  onClick={() => {
+                    let findInArray = isOpenCategory.find(
+                      (category) => category.name === cat.name
+                    );
+                    let changeVal = {
+                      ...findInArray,
+                      active: !findInArray.active,
+                    };
+                    console.log(changeVal);
+                    setIsOpenCategory([...isOpenCategory, changeVal]);
+                    let changedState = isOpenCategory.map((category) => {
+                      if (category.name === cat.name) {
+                        let change = {
+                          ...category,
+                          active: !category.active,
+                        };
+                        return change;
+                      }
+
+                      return category;
+                    });
+
+                    setIsOpenCategory(changedState);
+                  }}
+                />
               )}
             </SimplifiedDiv>
-            {filteredSubcategories.length > 0 &&(
-              <SimplifiedDiv style={styles.subCategoryContainer}>
-                {filteredSubcategories.map((sub) => (
-                  <Text style={styles.subCategoryText}>{sub.name}</Text>
-                ))}
-              </SimplifiedDiv>
-            )}
+            {filteredSubcategories.length > 0 &&
+              isOpenCategory[index].active && (
+                <SimplifiedDiv style={styles.subCategoryContainer}>
+                  {filteredSubcategories.map((sub) => (
+                    <Text style={styles.subCategoryText}>{sub.name}</Text>
+                  ))}
+                </SimplifiedDiv>
+              )}
           </>
         );
       })}
     </SimplifiedDiv>
   );
 };
-
 export default CategoryTab;
