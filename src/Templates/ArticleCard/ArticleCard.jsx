@@ -53,16 +53,16 @@ const ArticleCard = ({ title, description, image, price, onShowMore }) => {
         <Text fontSize={fontSize.medium}>{title}</Text>
         <Text fontSize={fontSize.optimal}>{description}</Text>
         <Text color={colors.lightBlack} fontSize={fontSize.optimal}>
-          {description.length > 70
-            ? description.slice(0, 70) + "..."
+          {description.length > 100
+            ? description.slice(0, 100) + "..."
             : description}
         </Text>
       </SimplifiedDiv>
       <SimplifiedDiv style={styles.buttonHolder}>
         <PrimaryButton
           primary
-          borderRadius='3px'
-          padding='10px'
+          borderRadius="3px"
+          padding="10px"
           onClick={onShowMore}
         >
           <ShoppingCartOutlined style={styles.shoppingCartIcon} />
@@ -70,6 +70,6 @@ const ArticleCard = ({ title, description, image, price, onShowMore }) => {
         </PrimaryButton>
       </SimplifiedDiv>
     </Card>
-  );
+  ); 
 };
 export default ArticleCard;
