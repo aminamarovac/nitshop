@@ -5,10 +5,8 @@ import SimplifiedDiv from "../../Components/SimplifiedDiv/SimplifiedDiv";
 import article1 from "../../assets/images/home/product1.jpg";
 import article2 from "../../assets/images/home/product2.jpg";
 import article3 from "../../assets/images/home/product3.jpg";
-
 const loremText =
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ";
-
+  "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
 export const articles = [
   {
     title: "Article 1",
@@ -47,13 +45,11 @@ export const articles = [
     price: "43$",
   },
 ];
-
 const ArticlesHomePage = () => {
   //Postaviti funkcije koje ce izlistavati artikle
-
   return (
     <SimplifiedDiv style={{}}>
-      <Grid container direction="row" spacing={3}>
+      <Grid container direction='row' spacing={3}>
         {articles.map((article) => {
           return (
             <Grid item md={4} lg={4}>

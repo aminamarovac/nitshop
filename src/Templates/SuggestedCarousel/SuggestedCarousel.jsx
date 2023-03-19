@@ -1,14 +1,15 @@
 import React from "react";
-import SimplifiedDiv from "../../Components/SimplifiedDiv/SimplifiedDiv";
-import Carousel from "../../Components/Carousel/Carousel";
-import { articles } from "../ArticlesHomePage/ArticlesHomePage";
 import ArticleCard from "../ArticleCard/ArticleCard";
+import { Carousel } from "react-responsive-carousel";
+import SimplifiedDiv from "../../Components/SimplifiedDiv/SimplifiedDiv";
+import { articles } from "../ArticlesHomePage/ArticlesHomePage";
 
 const styles = {
   articleCardHolder: {
     padding: 20,
   },
 };
+
 const SuggestedCarousel = () => {
   return (
     <SimplifiedDiv>
@@ -19,19 +20,20 @@ const SuggestedCarousel = () => {
         interval={1000}
         swipeable
         centerMode
+        autoPlay
         centerSlidePercentage={33}
       >
-        {articles.map((article, index) =>(
-            <SimplifiedDiv style={styles.articleCardHolder}>
-              <ArticleCard
-                key={index}
-                title={article.title}
-                image={article.image}
-                description={article.description}
-                price={article.price}
-              />
-            </SimplifiedDiv>
-          ))}
+        {articles.map((article, index) => (
+          <SimplifiedDiv style={styles.articleCardHolder}>
+            <ArticleCard
+              key={index}
+              title={article.title}
+              image={article.image}
+              description={article.description}
+              price={article.price}
+            />
+          </SimplifiedDiv>
+        ))}
       </Carousel>
     </SimplifiedDiv>
   );

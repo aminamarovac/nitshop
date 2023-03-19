@@ -16,7 +16,7 @@ const styles = {
     display: "flex",
     width: "100%",
     justifyContent: "center",
-    padding: "10px 0px",
+    padding: "20px 0px",
   },
   headingText: {
     fontSize: fontSize.medium,
@@ -42,7 +42,7 @@ const ProductsHomePage = () => {
           <SimplifiedDiv style={styles.headingContainer}>
             <Text style={styles.headingText}>Suggested articles</Text>
           </SimplifiedDiv>
-          <SuggestedCarousel/>
+          <SuggestedCarousel />
         </Grid>
       </Grid>
     </SimplifiedDiv>
