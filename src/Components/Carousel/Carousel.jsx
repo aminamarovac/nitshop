@@ -2,7 +2,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel as SliderCarousel } from "react-responsive-carousel";
 import Text from "../Text/Text";
 import SimplifiedDiv from "../SimplifiedDiv/SimplifiedDiv";
-import { colors, fontSize } from "../../util/theme";
+import { colors, fontFamily, fontSize } from "../../util/theme";
 
 const Carousel = ({ data }) => {
   const styles = {
@@ -34,9 +34,9 @@ const Carousel = ({ data }) => {
             alt={d.imgText}
           />
           <SimplifiedDiv style={styles.carouselText}>
-            <Text
+            <Text fontFamily={fontFamily.LatoBlack}
               fontSize={fontSize.xLarge}
-              color={colors.gray}
+              color={colors.accentColor}
               textAlign="left"
             >
               {d.imgText}

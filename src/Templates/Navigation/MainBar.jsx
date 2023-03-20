@@ -2,7 +2,7 @@ import Grid from "@mui/material/Grid";
 import CustomDiv from "../../Components/CustomDiv/CustomDiv";
 import Logo from "../../assets/images/logo.png";
 import Text from "../../Components/Text/Text";
-import { colors, fontSize } from "../../util/theme";
+import { colors, fontSize,fontFamily } from "../../util/theme";
 import { getScreenWidth } from "../../util/helpers";
 import PersonIcon from "@mui/icons-material/Person";
 import StarIcon from "@mui/icons-material/Star";
@@ -31,31 +31,31 @@ const MainBar = () => {
     >
       <CustomDiv display="flex" margin={rightMenuItemsMargin}>
         <PersonIcon style={iconStyle} />
-        <Text fontSize={fontSize.smallPlus} color={colors.gray}>
+        <Text fontFamily={fontFamily.LatoRegular} fontSize={fontSize.smallPlus} color={colors.gray}>
           Account
         </Text>
       </CustomDiv>
       <CustomDiv display="flex" margin={rightMenuItemsMargin}>
         <StarIcon style={iconStyle} />
-        <Text fontSize={fontSize.smallPlus} color={colors.gray}>
+        <Text fontFamily={fontFamily.LatoRegular} fontSize={fontSize.smallPlus} color={colors.gray}>
           Wishlist
         </Text>
       </CustomDiv>
       <CustomDiv display="flex" margin={rightMenuItemsMargin}>
         <LocationSearchingIcon style={iconStyle} />
-        <Text fontSize={fontSize.smallPlus} color={colors.gray}>
+        <Text  fontFamily={fontFamily.LatoRegular}fontSize={fontSize.smallPlus} color={colors.gray}>
           Checkout
         </Text>
       </CustomDiv>
       <CustomDiv display="flex" margin={rightMenuItemsMargin}>
         <ShoppingCartIcon style={iconStyle} />
-        <Text fontSize={fontSize.smallPlus} color={colors.gray}>
+        <Text  fontFamily={fontFamily.LatoRegular}fontSize={fontSize.smallPlus} color={colors.gray}>
           Cart
         </Text>
       </CustomDiv>
       <CustomDiv display="flex" margin={rightMenuItemsMargin}>
         <LockIcon style={iconStyle} />
-        <Text fontSize={fontSize.smallPlus} color={colors.gray}>
+        <Text fontFamily={fontFamily.LatoRegular} fontSize={fontSize.smallPlus} color={colors.gray}>
           Login
         </Text>
       </CustomDiv>

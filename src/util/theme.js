@@ -8,8 +8,8 @@ export const colors = {
   limeGreen: "#9de848",
   lightRed: "#f23f35",
   red: "red",
-  white:"white",
-  dirtyWhite:"fafdff",
+  white: "white",
+  dirtyWhite: "fafdff",
 };
 
 export const fontWeight = {
@@ -27,4 +27,23 @@ export const fontSize = {
   medium: "18px",
   large: "24px",
   xLarge: "36px",
+};
+
+export const fontFamily = {
+  LatoBlack: "LatoBlack",
+  LatoBlackItalic: "LatoBlackItalic",
+  LatoLightItalic: "LatoLightItalic",
+  LatoBold: "LatoBold",
+  LatoBoldItalic: "LatoBoldItalic",
+  LatoItalic: "LatoItalic",
+  LatoThin: "LatoThin",
+  LatoLight: "LatoLight",
+  LatoThinItalic: "LatoThinItalic",
+  LatoRegular: "LatoRegular",
+  MontserratBlack: "MontserratBlack",
+  MontserratBlackItalic: "MontserratBlackItalic",
+  MontserratBold: "MontserratBold",
+  MontserratBoldItalic: "MontserratBoldItalic",
+  MontserratExtraBold: "MontserratExtraBold",
+  MontserratExtraLight: "MontserratExtraLight",
 };
