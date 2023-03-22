@@ -9,6 +9,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import InputAdornment from "@mui/material/InputAdornment";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const styles = {
   navBar: {
@@ -56,21 +57,21 @@ const LinkBar = () => {
       <Grid container direction="row">
         <Grid item sm={6} md={6} lg={6}>
           <SimplifiedDiv style={styles.navBar}>
-            <Text style={styles.linksLG}>
+            <Link  to="/" style={styles.linksLG}>
               Home
-            </Text>
-            <Text style={styles.linksLG} >
+            </Link>
+            <Link to="/shop"  style={styles.linksLG} >
               Shop
-            </Text>
-            <Text style={styles.linksLG}>
+            </Link>
+            <Link style={styles.linksLG}>
               Blog
-            </Text>
-            <Text style={styles.linksLG}>
+            </Link>
+            <Link style={styles.linksLG}>
               About
-            </Text>
-            <Text style={styles.linksLG}>
+            </Link>
+            <Link style={styles.linksLG}>
               Kontakt
-            </Text>
+            </Link>
           </SimplifiedDiv>
         </Grid>
         <Grid item sm={6} md={6} lg={6}>

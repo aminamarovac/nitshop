@@ -97,3 +97,7 @@
 *{
   font-family: "LatoRegular";
 }
+
+a{
+  text-decoration: none;
+}

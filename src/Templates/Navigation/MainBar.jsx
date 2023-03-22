@@ -55,7 +55,7 @@ const MainBar = () => {
       </CustomDiv>
       <CustomDiv display="flex" margin={rightMenuItemsMargin}>
         <LockIcon style={iconStyle} />
-        <Text fontFamily={fontFamily.LatoRegular} fontSize={fontSize.smallPlus} color={colors.gray}>
+        <Text fontFamily={fontFamily.LatoRegular} ofontSize={fontSize.smallPlus} color={colors.gray}>
           Login
         </Text>
       </CustomDiv>
