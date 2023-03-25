@@ -33,59 +33,51 @@ const styles = {
     backgroundColor: colors.gray,
     textAlign: "left",
     padding: "10px 20px",
-    margin:"15px 0px",
+    margin: "15px 0px",
   },
   links: {
-    margin: "10px 0px",
+    padding: "10px 0px",
     fontSize: fontSize.normal,
     color: colors.white,
+    fontFamily: fontFamily.LatoItalic,
   },
-  linksLG:{
-    fontFamily:fontFamily.LatoRegular,
-     fontSize:fontSize.normal ,
-     color:colors.gray
-  }
+  linksLG: {
+    fontFamily: fontFamily.LatoRegular,
+    fontSize: fontSize.normal,
+    color: colors.gray,
+  },
 };
-
 const LinkBar = () => {
   const screenWidth = getScreenWidth();
-
   const [isOpen, setIsOpen] = useState(false);
-
   const LinkBarLG = () => (
-    <CustomDiv display="flex" padding="0px 10%" width="100%">
-      <Grid container direction="row">
+    <CustomDiv display='flex' padding='0px 10%' width='100%'>
+      <Grid container direction='row'>
         <Grid item sm={6} md={6} lg={6}>
           <SimplifiedDiv style={styles.navBar}>
-            <Link  to="/" style={styles.linksLG}>
+            <Link to='/' style={styles.linksLG}>
               Home
             </Link>
-            <Link to="/shop"  style={styles.linksLG} >
+            <Link to='/shop' style={styles.linksLG}>
               Shop
             </Link>
-            <Link style={styles.linksLG}>
-              Blog
-            </Link>
-            <Link style={styles.linksLG}>
-              About
-            </Link>
-            <Link style={styles.linksLG}>
-              Kontakt
-            </Link>
+            <Link style={styles.linksLG}>Blog</Link>
+            <Link style={styles.linksLG}>About</Link>
+            <Link style={styles.linksLG}>Kontakt</Link>
           </SimplifiedDiv>
         </Grid>
         <Grid item sm={6} md={6} lg={6}>
           <CustomDiv
-            display="flex"
-            alignItems="center"
-            justifyContent="flex-end"
+            display='flex'
+            alignItems='center'
+            justifyContent='flex-end'
           >
             <TextField
-              size="small"
-              label="Search"
+              size='small'
+              label='Search'
               InputProps={{
                 endAdornment: (
-                  <InputAdornment position="end">
+                  <InputAdornment position='end'>
                     <SearchIcon />
                   </InputAdornment>
                 ),
@@ -96,7 +88,6 @@ const LinkBar = () => {
       </Grid>
     </CustomDiv>
   );
-
   const LinkBarSM = ({ open }) => (
     <SimplifiedDiv
       style={{
@@ -113,11 +104,11 @@ const LinkBar = () => {
       >
         <Grid item xs={6} sm={6} md={6}>
           <TextField
-            size="small"
-            label="Search"
+            size='small'
+            label='Search'
             InputProps={{
               endAdornment: (
-                <InputAdornment position="end">
+                <InputAdornment position='end'>
                   <SearchIcon />
                 </InputAdornment>
               ),
@@ -148,20 +139,18 @@ const LinkBar = () => {
       {isOpen && (
         <SimplifiedDiv style={styles.linkMenu}>
           <Text style={styles.links}>Home</Text>
-          <Text style={styles.links}> Shop</Text>
-          <Text style={styles.links}> Blog</Text>
+          <Text style={styles.links}>Shop</Text>
+          <Text style={styles.links}>Blog</Text>
           <Text style={styles.links}>About</Text>
           <Text style={styles.links}>Contact</Text>
         </SimplifiedDiv>
       )}
     </SimplifiedDiv>
   );
-
   return screenWidth === "SM" || screenWidth === "MD" ? (
     <LinkBarSM />
   ) : (
     <LinkBarLG />
   );
 };
-
 export default LinkBar;
