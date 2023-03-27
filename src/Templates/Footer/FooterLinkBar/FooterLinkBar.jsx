@@ -12,7 +12,7 @@ const FooterLinkBar = () => {
     },
     headingText: {
       textAlign: "center",
-    },
+    }
   };
 
   return (
