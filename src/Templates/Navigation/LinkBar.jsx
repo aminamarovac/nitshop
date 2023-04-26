@@ -61,8 +61,8 @@ const LinkBar = () => {
             <Link to='/shop' style={styles.linksLG}>
               Shop
             </Link>
-            <Link style={styles.linksLG}>Blog</Link>
-            <Link style={styles.linksLG}>About</Link>
+            <Link to="/contact" style={styles.linksLG}>Blog</Link>
+            <Link to="/contact" style={styles.linksLG}>About</Link>
             <Link style={styles.linksLG}>Kontakt</Link>
           </SimplifiedDiv>
         </Grid>

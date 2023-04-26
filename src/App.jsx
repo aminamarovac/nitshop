@@ -31,6 +31,18 @@ const App = () => {
       path: "/shop",
       element: <ShopScreen />,
     },
+    {
+      path: "/blog",
+      element: <></>,
+    },
+    {
+      path: "/about",
+      element: <></>,
+    },
+    {
+      path: "/contact",
+      element: <></>,
+    },
   ]);
 
   return (
