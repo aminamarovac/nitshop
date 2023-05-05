@@ -1,6 +1,6 @@
 import React from "react";
-import FooterLinkBar from "./FooterLinkBar";
 import Bottombar from "./Bottombar";
+import FooterLinkBar from "./FooterLinkBar/FooterLinkBar";
 
 const Footer = () => {
   return (
