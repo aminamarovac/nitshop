@@ -5,3 +5,5 @@ export const AboutScreen = () => {
     <div>AboutScreen</div>
   )
 }
+
+export default AboutScreen;

@@ -5,3 +5,5 @@ export const BlogScreens = () => {
     <div>BlogScreens</div>
   )
 }
+
+export default BlogScreens;

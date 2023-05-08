@@ -1,5 +1,7 @@
+
 import React, { useContext } from "react";
 import "./App.css";
+
 import "./assets/fonts/Lato-Black.ttf";
 import "./assets/fonts/Lato-BlackItalic.ttf";
 import "./assets/fonts/Lato-Bold.ttf";
@@ -19,16 +21,13 @@ import "./assets/fonts/Montserrat-ExtraLight.ttf";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePageScreen from "./Screens/HomePageScreen/HomePageScreen";
 import ShopScreen from "./Screens/ShopScreen/ShopScreen";
-import  BlogScreens  from "./Screens/BlogScreen/BlogScreen";
+import BlogScreen from "./Screens/BlogScreen/BlogScreen";
+import AboutScreen from "./Screens/AboutScreen/AboutScreen";
+import ContactScreen from "./Screens/ContactScreen/ContactScreen";
 import CartScreen from "./Screens/CartScreen/CartScreen";
-import { ContactScreen } from "./Screens/ContactScreen/ContactScreen";
-import { CartContext } from "./context/CartContext";
+import CartContextProvider, { CartContext } from "./context/CartContext";
 
 const App = () => {
-
-  const values=useContext(CartContext);
-
-  values.items;
   const router = createBrowserRouter([
     {
       path: "/",
@@ -59,6 +58,9 @@ const App = () => {
   return (
     <>
       <RouterProvider router={router} />
+      <CartContextProvider>
+        <RouterProvider router={router} />
+      </CartContextProvider>
     </>
   );
 };

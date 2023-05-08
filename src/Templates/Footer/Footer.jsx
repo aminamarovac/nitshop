@@ -1,12 +1,11 @@
 import React from "react";
-import Bottombar from "./Bottombar";
-import FooterLinkBar from "./FooterLinkBar/FooterLinkBar";
+import FooterLinkBar from "./FooterLinkBar/FooterLinkBar"
+import "../Footer/Bottombar"
 
 const Footer = () => {
   return (
     <>
       <FooterLinkBar />
-      <Bottombar/>
     </>
   );
 };

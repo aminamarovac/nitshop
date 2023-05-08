@@ -5,3 +5,5 @@ export const ContactScreen = () => {
     <div>ContactScreen</div>
   )
 }
+
+export default ContactScreen;

@@ -3,13 +3,11 @@ import ArticleCard from "../ArticleCard/ArticleCard";
 import { Carousel } from "react-responsive-carousel";
 import SimplifiedDiv from "../../Components/SimplifiedDiv/SimplifiedDiv";
 import { articles } from "../ArticlesHomePage/ArticlesHomePage";
-
 const styles = {
   articleCardHolder: {
     padding: 20,
   },
 };
-
 const SuggestedCarousel = () => {
   return (
     <SimplifiedDiv>
@@ -20,6 +18,7 @@ const SuggestedCarousel = () => {
         interval={1000}
         swipeable
         centerMode
+        showThumbs={false}
         autoPlay
         centerSlidePercentage={33}
       >
@@ -38,5 +37,4 @@ const SuggestedCarousel = () => {
     </SimplifiedDiv>
   );
 };
-
 export default SuggestedCarousel;

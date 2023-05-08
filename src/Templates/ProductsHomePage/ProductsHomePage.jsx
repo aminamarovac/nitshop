@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Grid } from "@mui/material";
 import SimplifiedDiv from "../../Components/SimplifiedDiv/SimplifiedDiv";
 import Text from "../../Components/Text/Text";
@@ -6,6 +6,7 @@ import CategoryTab from "../CategoryTab/CategoryTab";
 import { colors, fontSize, fontWeight } from "../../util/theme";
 import ArticlesHomePage from "../ArticlesHomePage/ArticlesHomePage";
 import SuggestedCarousel from "../SuggestedCarousel/SuggestedCarousel";
+import { CartContext } from "../../context/CartContext";
 
 const styles = {
   container: {
@@ -24,7 +25,22 @@ const styles = {
     fontWeight: fontWeight.mediumBold,
   },
 };
+
 const ProductsHomePage = () => {
+  const { items, setItems } = useContext(CartContext);
+
+  useEffect(() => {
+    let mounted = false;
+
+    if (mounted) return;
+
+    setItems({
+      name: "patike",
+      price: "22",
+    });
+    mounted = true;
+  }, []);
+
   return (
     <SimplifiedDiv style={styles.container}>
       <Grid container direction='row' spacing={5}>
@@ -48,4 +64,4 @@ const ProductsHomePage = () => {
     </SimplifiedDiv>
   );
 };
-export default ProductsHomePage;
+export default ProductsHomePage

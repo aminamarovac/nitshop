@@ -1,15 +1,14 @@
 import React from "react";
-import Text from "../../Components/Text/Text";
-import SimplifiedDiv from "../../Components/SimplifiedDiv/SimplifiedDiv";
-import { colors } from "../../util/theme";
+import Text from "../../../Components/Text/Text"
+import SimplifiedDiv from "../../../Components/SimplifiedDiv/SimplifiedDiv"
+import { colors, fontSize, fontWeight } from "../../../util/theme"
 import { Grid } from "@mui/material";
-import { fontSize } from "../../../util/theme";
 
 const FooterLinkBar = () => {
   const styles = {
     mainHolder: {
       backgroundColor: colors.secondColor,
-      padding: "20px 100px",
+      padding: "20px 150px",
     },
     headingText: {
       textAlign: "left",
@@ -25,7 +24,6 @@ const FooterLinkBar = () => {
       padding: "20px 0px",
       lineHeight: "30px",
     },
-
     innerBoxText: {
       fontSize: fontSize.optimal,
       color: colors.gray,
@@ -44,7 +42,7 @@ const FooterLinkBar = () => {
 
   const SecondRow = () => (
     <SimplifiedDiv style={styles.innerBoxHolder}>
-      <Text style={styles.innerBoxText}>T-shirts</Text>
+      <Text style={styles.innerBoxText}>T-Shirts</Text>
       <Text style={styles.innerBoxText}>Mens</Text>
       <Text style={styles.innerBoxText}>Womens</Text>
       <Text style={styles.innerBoxText}>Gift cards</Text>
@@ -57,7 +55,7 @@ const FooterLinkBar = () => {
       <Text style={styles.innerBoxText}>Terms of use</Text>
       <Text style={styles.innerBoxText}>Privacy policy</Text>
       <Text style={styles.innerBoxText}>Refund policy</Text>
-      <Text style={styles.innerBoxText}>Billyng system</Text>
+      <Text style={styles.innerBoxText}>Billing system</Text>
       <Text style={styles.innerBoxText}>Ticket system</Text>
     </SimplifiedDiv>
   );
@@ -67,13 +65,14 @@ const FooterLinkBar = () => {
       <Text style={styles.innerBoxText}>Company information</Text>
       <Text style={styles.innerBoxText}>Careers</Text>
       <Text style={styles.innerBoxText}>Store location</Text>
-      <Text style={styles.innerBoxText}>Affiliate program</Text>
+      <Text style={styles.innerBoxText}>Affillate program</Text>
       <Text style={styles.innerBoxText}>Copyright</Text>
     </SimplifiedDiv>
   );
+
   return (
     <SimplifiedDiv style={styles.mainHolder}>
-      <Grid container direction="row">
+      <Grid container direction='row'>
         <Grid item md={2} lg={2}>
           <SimplifiedDiv style={styles.boxHolder}>
             <Text style={styles.headingText}>Service</Text>
@@ -81,7 +80,7 @@ const FooterLinkBar = () => {
           </SimplifiedDiv>
         </Grid>
         <Grid item md={2} lg={2}>
-          <SimplifiedDiv>
+          <SimplifiedDiv style={styles.boxHolder}>
             <Text style={styles.headingText}>Quick shop</Text>
             <SecondRow />
           </SimplifiedDiv>
